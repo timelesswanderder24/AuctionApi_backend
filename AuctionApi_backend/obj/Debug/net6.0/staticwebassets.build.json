@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6B/DVtZkd/G/VwN9sQyFe0OazSkK6PgXcpPBZzvTjdw=",
+  "Source": "AuctionApi_backend",
+  "BasePath": "_content/AuctionApi_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

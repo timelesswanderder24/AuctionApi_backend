@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "vqBOmae2bp69z+Ul8Aw5Q49+odFNeNY9mPJJlwBsYCPwaLZwcw4rrN3V+KjCOLrgalgrJPsxavZNgcZXj+Zo6A==",
+  "success": true,
+  "projectFilePath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
