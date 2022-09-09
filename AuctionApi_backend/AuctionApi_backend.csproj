@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AuctionApi.Domain\" />
+    <Folder Include="AuctionApi\" />
+    <Folder Include="AuctionApi.Infrastructure\" />
+    <Folder Include="AuctionApi.UnitTests\" />
+    <Folder Include="Auction.AppServices\" />
+  </ItemGroup>
+
 </Project>
