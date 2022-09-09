@@ -25,3 +25,10 @@ D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\ob
 D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\obj\Debug\net6.0\AuctionApi_backend.pdb
 D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\obj\Debug\net6.0\AuctionApi_backend.genruntimeconfig.cache
 D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\obj\Debug\net6.0\ref\AuctionApi_backend.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\AuctionApi.Domain.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\AuctionApi.Services.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\AuctionApi.Domain.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi_backend\bin\Debug\net6.0\AuctionApi.Services.pdb

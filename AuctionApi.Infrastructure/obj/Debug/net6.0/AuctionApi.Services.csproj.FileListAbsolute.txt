@@ -1,0 +1,15 @@
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\bin\Debug\net6.0\AuctionApi.Services.deps.json
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\bin\Debug\net6.0\AuctionApi.Services.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\bin\Debug\net6.0\AuctionApi.Services.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\bin\Debug\net6.0\AuctionApi.Domain.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\bin\Debug\net6.0\AuctionApi.Domain.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.csproj.AssemblyReference.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.AssemblyInfoInputs.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.AssemblyInfo.cs
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.csproj.CoreCompileInputs.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.csproj.CopyComplete
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\refint\AuctionApi.Services.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\AuctionApi.Services.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Infrastructure\obj\Debug\net6.0\ref\AuctionApi.Services.dll

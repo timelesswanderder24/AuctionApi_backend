@@ -1,0 +1,12 @@
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\bin\Debug\net6.0\AuctionApi.Domain.deps.json
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\bin\Debug\net6.0\AuctionApi.Domain.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\bin\Debug\net6.0\AuctionApi.Domain.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.csproj.AssemblyReference.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.AssemblyInfoInputs.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.AssemblyInfo.cs
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.csproj.CoreCompileInputs.cache
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\refint\AuctionApi.Domain.dll
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\AuctionApi.Domain.pdb
+D:\Imashi Kiigama\MSA\Phase3_submission\AuctionApi_backend\AuctionApi.Domain\obj\Debug\net6.0\ref\AuctionApi.Domain.dll

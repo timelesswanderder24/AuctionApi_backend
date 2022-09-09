@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "nmwZd4Y2SOyV5JP1p7H5JTqTFLQAPyyxfsoVlossh/GZ6yFThW2R0tI9TvXvU6VjeT2j/pOYh7iySDWxQMtCog==",
+  "dgSpecHash": "jzILnIkkOi7+/A8g/as0L31VW0er+swNvXVP5xuXrUXW/icHMDuzQy0h+xS38gnlzlxDthlqNdU8TthzQsC4Vw==",
   "success": true,
-  "projectFilePath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\imashi_24\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,4 +1,6 @@
-//using microsoft;
+using Microsoft.EntityFrameworkCore;
+using AuctionApi.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+builder.Services.AddScoped<IAuctionRepo, AuctionRepo>();
 
 app.UseHttpsRedirection();
 
