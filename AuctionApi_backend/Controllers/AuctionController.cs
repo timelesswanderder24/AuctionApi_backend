@@ -12,6 +12,7 @@ namespace AuctionApi_backend.Controllers
     public class AuctionController:Controller
     {
         public IAuctionRepo _repository;
+        private ILogger<AuctionController> logger;
         private readonly IDistributedCache _distributedCache;
 
         public AuctionController(IAuctionRepo repository, IDistributedCache distributedCache)
@@ -19,6 +20,11 @@ namespace AuctionApi_backend.Controllers
             _repository = repository;
             //.NET core has inbuilt dependency injection. So in run time it will provide the distributedCache
             _distributedCache = distributedCache;
+        }
+
+        public AuctionController(ILogger<AuctionController> logger)
+        {
+            this.logger = logger;
         }
 
         [HttpGet("ListItems")]
@@ -48,7 +54,7 @@ namespace AuctionApi_backend.Controllers
             {
                 //Get user from the database
                 user = _repository.GetAllUsers().FirstOrDefault(e => e.UserName == userName) ;
-                //store the user into the cache
+                //store the user into the cache  
                 if (user != null)
                    _distributedCache.SetStringAsync("userObj_" + userName, JsonConvert.SerializeObject(user));
             }
@@ -58,5 +64,91 @@ namespace AuctionApi_backend.Controllers
 
             return user;
         }
+
+        // PUT /api/Register
+        [HttpPost("Register")]
+        public ActionResult registerUser(User user)
+        {
+            String output = "";
+            IEnumerable<User> users = _repository.GetAllUsers();
+            if (users.FirstOrDefault(u => u.UserName == user.UserName) == null)
+            {
+                _repository.AddUser(user);
+                output = "User successfully registered.";
+            }
+            else
+            {
+                output = "Username not available.";
+            }
+
+            return Ok(output);
+
+        }
+
+        // GET /api/GetItem/{id}
+        [HttpGet("GetItem/{id}")]
+        public ActionResult<Item> getItem(int id)
+        {
+            IEnumerable<Item> items = _repository.GetAllItems();
+            Item item = items.FirstOrDefault(x => x.Id == id);
+            return Ok(item);
+        }
+
+        // PUT /api/AddItem
+        [HttpPost("AddItem")]
+        public ActionResult<Item> addItem(Item inputItem)
+        {
+            Item item;
+
+            if (inputItem.StartBid == null)
+            {
+                item = new Item
+                {
+                    Owner = inputItem.Owner,
+                    Title = inputItem.Title,
+                    Description = inputItem.Description,
+                    StartBid = 0,
+                    State = "active"
+                };
+            }
+            else
+            {
+                item = new Item
+                {
+                    Owner = inputItem.Owner,
+                    Title = inputItem.Title,
+                    Description = inputItem.Description,
+                    StartBid = (float)inputItem.StartBid,
+                    State = "active"
+                };
+            }
+            _repository.AddItem(item);
+            Response.Headers.Add("location", "https://localhost:8080/api/GetItem/" + item.Id);
+            return Ok(item);
+        }
+
+        [HttpGet("CloseAuction/{id}")]
+
+        public ActionResult closeAuction(int id)
+        {
+            string result = "";
+            String userName;
+            IEnumerable<Item> items = _repository.GetAllItems();
+            Item item = items.FirstOrDefault(e => e.Id == id);
+            if (item != null)
+            {
+                item.State = "closed";
+                _repository.SaveChanges();
+                result = "Auction closed.";
+                }
+            else
+            {
+                result = "Auction does not exist.";
+            }
+
+            return Ok(result);
+        }
+
+
     }
 }

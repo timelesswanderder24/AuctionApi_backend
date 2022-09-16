@@ -12,9 +12,7 @@ namespace AuctionApi.Services
     {
         public IEnumerable<User> GetAllUsers();
         public IEnumerable<Item> GetAllItems();
-        public IEnumerable<Admin> GetAllAdmins();
         public bool ValidLoginUser(string userName, string password);
-        public bool ValidLoginAdmin(string userName, string password);
         public User AddUser(User user);
         public Item AddItem(Item item);
         public void DeleteItem(Item item);

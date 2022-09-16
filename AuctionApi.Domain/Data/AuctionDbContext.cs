@@ -10,7 +10,6 @@ namespace AuctionApi.Domain.Data
 {
     public class AuctionDbContext : DbContext {
         public AuctionDbContext(DbContextOptions<AuctionDbContext> options) : base(options) { }
-        public DbSet<Admin> admins { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<Item> items { get; set; }
     }

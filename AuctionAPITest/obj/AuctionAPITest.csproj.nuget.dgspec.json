@@ -1,0 +1,304 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionAPITest\\AuctionAPITest.csproj": {}
+  },
+  "projects": {
+    "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj",
+        "projectName": "AuctionApi.Domain",
+        "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj",
+        "packagesPath": "C:\\Users\\imashi_24\\.nuget\\packages\\",
+        "outputPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\imashi_24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj",
+        "projectName": "AuctionApi.Services",
+        "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj",
+        "packagesPath": "C:\\Users\\imashi_24\\.nuget\\packages\\",
+        "outputPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\imashi_24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionAPITest\\AuctionAPITest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionAPITest\\AuctionAPITest.csproj",
+        "projectName": "AuctionAPITest",
+        "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionAPITest\\AuctionAPITest.csproj",
+        "packagesPath": "C:\\Users\\imashi_24\\.nuget\\packages\\",
+        "outputPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionAPITest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\imashi_24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj",
+        "projectName": "AuctionApi_backend",
+        "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj",
+        "packagesPath": "C:\\Users\\imashi_24\\.nuget\\packages\\",
+        "outputPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\imashi_24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj"
+              },
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.Extensions.Caching.Redis": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Caching.Redis.Core": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

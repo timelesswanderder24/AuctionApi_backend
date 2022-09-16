@@ -26,12 +26,6 @@ namespace AuctionApi.Services
             return Items;
         }
 
-        public IEnumerable<Admin> GetAllAdmins()
-        {
-            IEnumerable<Admin> Admins = _dbContext.admins.ToList<Admin>();
-            return Admins;
-        }
-
         public User AddUser(User user)
         {
             EntityEntry<User> e = _dbContext.users.Add(user);
@@ -57,15 +51,6 @@ namespace AuctionApi.Services
         public bool ValidLoginUser(string userName, string password)
         {
             User u = _dbContext.users.FirstOrDefault(e => e.UserName == userName && e.Password == password);
-            if (u == null)
-                return false;
-            else
-                return true;
-        }
-
-        public bool ValidLoginAdmin(string userName, string password)
-        {
-            Admin u = _dbContext.admins.FirstOrDefault(e => e.UserName == userName && e.Password == password);
             if (u == null)
                 return false;
             else
