@@ -146,6 +146,12 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Domain\\AuctionApi.Domain.csproj"
+              },
+              "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj": {
+                "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi.Infrastructure\\AuctionApi.Services.csproj"
+              },
               "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj": {
                 "projectPath": "D:\\Imashi Kiigama\\MSA\\Phase3_submission\\AuctionApi_backend\\AuctionApi_backend\\AuctionApi_backend.csproj"
               }
@@ -165,6 +171,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.4.0, )"
             },
             "NUnit": {
               "target": "Package",

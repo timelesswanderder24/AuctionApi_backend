@@ -2,68 +2,158 @@ using AuctionApi_backend.Controllers;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using AuctionApi.Services;
+using NSubstitute;
+using AuctionApi.Domain.Models;
+using NUnit;
+using Microsoft.Extensions.Caching.Distributed;
+using AuctionApi.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using AuctionApi.Domain.Models.DTO;
 
 namespace AuctionAPITest
 {
+    [TestFixture]
     public class UnitTest1
     {
-        private readonly string[] args;
+        private IAuctionRepo _auctionRepo;
+        private ILogger _logger;
+        private IDistributedCache _distributedCache;
+
+        private AuctionController _controller;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _auctionRepo = Substitute.For<IAuctionRepo>();
+            _logger = Substitute.For<ILogger>();
+            var loggerFactory = Substitute.For<ILoggerFactory>();
+            //Logger creation = LoggerFactory.CreateLogger(Arg.Any<string>()).Returns(_logger);
+
+            _controller = new AuctionController(_auctionRepo,_distributedCache, loggerFactory);
+        }
 
         [Test]
-        public void putArtist()
+        public void registerUserTest()
         {
             //Arrange
-            var builder = WebApplication.CreateBuilder(args);
-
-            builder.Logging.ClearProviders();
-            builder.Logging.AddConsole();
-            var app = builder.Build();
-            ILogger<AuctionController> logger = app.Services.GetRequiredService<ILogger<AuctionController>>();
-            var test = new AuctionController(logger);
+            User user = new User { UserName = "Anna", Password = "Key123" };
+            _auctionRepo.AddUser(user);
+            string expected = "User successfully registered.";
 
             //Act
-            var count = test.Get().Count();
-            var actionResult = test.Post("Jane", 13, "Rock");
+            string result = _controller.registerUser(user);
+
             //Assert
-            Assert.AreEqual(count, test.Get().Count());
-
-        }
-        [Test]
-        public void GetReturnsProduct()
-        {
-            // Arrange
-            var controller = new AuctionController(repository);
-            controller.Request = new HttpRequestMessage();
-            controller.Configuration = new HttpConfiguration();
-
-            // Act
-            var response = controller.Get(10);
-
-            // Assert
-            Product product;
-            Assert.IsTrue(response.TryGetContentValue<Product>(out product));
-            Assert.AreEqual(10, product.Id);
+            Assert.AreEqual(result, expected);
         }
 
         /*
+        
         [Test]
-        public void deleteArtist()
+        public void getUserTest()
         {
-            //Arrange
-            var builder = WebApplication.CreateBuilder(args);
-
-            builder.Logging.ClearProviders();
-            builder.Logging.AddConsole();
-            var app = builder.Build();
-            ILogger<ArtistController> logger = app.Services.GetRequiredService<ILogger<ArtistController>>();
-            var test = new ArtistController(logger);
+            //Arrange 
+            var userName = "Anna";
+            User  user = _auctionRepo.GetAllUsers().FirstOrDefault(e => e.UserName == userName);
+            // ActionResult<User> expected = user;
 
             //Act
-            var count = test.Get().Count();
-            var actionResult = test.DemonstrateDelete(test.Get().ElementAt(0).Name);
+            User result = _controller.getUser(userName);
+
             //Assert
-            Assert.AreEqual(count, test.Get().Count());
+            Assert.AreEqual(result, null);
 
         }*/
+
+        [Test]
+        public void getAuctionItems()
+        {
+            //Arrange 
+            IEnumerable<Item> activeItems = _auctionRepo.GetAllItems().Where(e => e.State == "active");
+            IEnumerable<Item> sortedItems = activeItems.OrderBy(e => e.StartBid).ThenBy(e => e.Id);
+
+            //Act
+            IEnumerable<Item> Result = _controller.auctionItems();
+
+            //Assert
+            Assert.AreEqual(Result, sortedItems);
+
+        }
+
+        [Test]
+        public void getAuctionItem()
+        {
+            //Arrange 
+            int id = 24;
+            IEnumerable<Item> items = _auctionRepo.GetAllItems();
+            Item item = items.FirstOrDefault(x => x.Id == id);
+
+            //Act
+            Item Result = _controller.getItem(id);
+
+            //Assert
+            Assert.AreEqual(Result, item);
+
+        }
+
+        [Test]
+        public void addItemTest()
+        {
+            //Arrange 
+            InputItem item = new InputItem { Owner = "Katy", Description="large", StartBid=0, Title="Vase"};
+            Item newItem = new Item { };
+            if (item.StartBid != null)
+            {
+                newItem = new Item
+                {
+                    Owner = item.Owner,
+                    Title = item.Title,
+                    Description = item.Description,
+                    StartBid = (float)item.StartBid,
+                    State = "active"
+                };
+            }
+            _auctionRepo.AddItem(newItem);
+
+            //Act
+            Item Result = _controller.addItem(item);
+
+            //Assert
+            Assert.AreEqual(Result, newItem);
+
+        }
+
+        [Test]
+        public void closeAuctionTest()
+        {
+            //Arrange 
+            int id = 24;
+            IEnumerable<Item> items = _auctionRepo.GetAllItems();
+            Item item = items.FirstOrDefault(x => x.Id == id);
+            string expected = "";
+            if (item != null)
+            {
+                item.State = "closed";
+                _auctionRepo.SaveChanges();
+                expected = "Auction closed.";
+            }
+            else
+            {
+                expected = "Auction does not exist.";
+            }
+
+            //Act
+            String Result = _controller.closeAuction(id);
+
+            //Assert
+            Assert.AreEqual(Result, expected);
+
+        }
+
+
     }
 }
+
+

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AuctionApi.Domain.Models;
+using AuctionApi.Domain.Models.DTO;
 using AuctionApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Caching.Distributed;
@@ -12,34 +13,31 @@ namespace AuctionApi_backend.Controllers
     public class AuctionController:Controller
     {
         public IAuctionRepo _repository;
-        private ILogger<AuctionController> logger;
+        private ILogger _logger;
         private readonly IDistributedCache _distributedCache;
 
-        public AuctionController(IAuctionRepo repository, IDistributedCache distributedCache)
+        public AuctionController(IAuctionRepo repository, IDistributedCache distributedCache, ILoggerFactory loggerFactory)
         {
             _repository = repository;
             //.NET core has inbuilt dependency injection. So in run time it will provide the distributedCache
             _distributedCache = distributedCache;
+            _logger = loggerFactory.CreateLogger(nameof(AuctionController));
         }
 
-        public AuctionController(ILogger<AuctionController> logger)
-        {
-            this.logger = logger;
-        }
 
         [HttpGet("ListItems")]
 
-        public ActionResult<IEnumerable<Item>> auctionItems()
+        public IEnumerable<Item> auctionItems()
         {
 
             IEnumerable<Item> activeItems = _repository.GetAllItems().Where(e => e.State == "active");
             IEnumerable<Item> sortedItems = activeItems.OrderBy(e => e.StartBid).ThenBy(e => e.Id);
-            return Ok(sortedItems);
+            return (sortedItems);
         }
 
         [HttpGet("GetUser")]
 
-        public ActionResult<User> getUser(string userName)
+        public User getUser(string userName)
         {
             User user = null;
             // get data from Redis Cache
@@ -67,7 +65,7 @@ namespace AuctionApi_backend.Controllers
 
         // PUT /api/Register
         [HttpPost("Register")]
-        public ActionResult registerUser(User user)
+        public string registerUser(User user)
         {
             String output = "";
             IEnumerable<User> users = _repository.GetAllUsers();
@@ -81,22 +79,22 @@ namespace AuctionApi_backend.Controllers
                 output = "Username not available.";
             }
 
-            return Ok(output);
+            return (output);
 
         }
 
         // GET /api/GetItem/{id}
         [HttpGet("GetItem/{id}")]
-        public ActionResult<Item> getItem(int id)
+        public Item getItem(int id)
         {
             IEnumerable<Item> items = _repository.GetAllItems();
             Item item = items.FirstOrDefault(x => x.Id == id);
-            return Ok(item);
+            return (item);
         }
 
         // PUT /api/AddItem
         [HttpPost("AddItem")]
-        public ActionResult<Item> addItem(Item inputItem)
+        public Item addItem(InputItem inputItem)
         {
             Item item;
 
@@ -124,12 +122,12 @@ namespace AuctionApi_backend.Controllers
             }
             _repository.AddItem(item);
             Response.Headers.Add("location", "https://localhost:8080/api/GetItem/" + item.Id);
-            return Ok(item);
+            return (item);
         }
 
         [HttpGet("CloseAuction/{id}")]
 
-        public ActionResult closeAuction(int id)
+        public string closeAuction(int id)
         {
             string result = "";
             String userName;
@@ -146,7 +144,7 @@ namespace AuctionApi_backend.Controllers
                 result = "Auction does not exist.";
             }
 
-            return Ok(result);
+            return (result);
         }
 
 
